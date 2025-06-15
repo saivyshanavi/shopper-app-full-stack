@@ -25,23 +25,18 @@ const uuidv4=v4
 }; */ 
 
 
-const allowedOrigins = [
-  'https://vyshnavi-shopper-app-full-stack.vercel.app',
-  'http://localhost:4000'
-];
-
-app.use(cors({
-  origin: function (origin, callback) {
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true)
-    } else {
-      callback(new Error('Not allowed by CORS'))
-    }
-  },
-  credentials: true,
+const corsOptions = {
+  origin: [
+    'https://vyshnavi-shopper-app-full-stack.vercel.app', // your deployed frontend
+    'http://localhost:4000', // optional: for local dev
+  ],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization']
-}));
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true,
+};
+
+app.use(cors(corsOptions));
+
 
 
 
