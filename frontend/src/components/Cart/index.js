@@ -29,7 +29,7 @@ class Cart extends Component {
       apiStatus: apiStatusConstants.inProgress,
     })
     const jwtToken = Cookies.get('jwt_token')
-    const apiUrl = `https://vyshnavi-shopper-app-full-stack.onrender.com/cart/`
+    const apiUrl = `https://vyshnavi-shopper-app-full-stack.onrender.com/cart`
     const options = {
       headers: {
         Authorization: `Bearer ${jwtToken}`,
