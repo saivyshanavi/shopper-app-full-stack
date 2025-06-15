@@ -27,7 +27,7 @@ const uuidv4=v4
 
 const allowedOrigins = [
   'https://vyshnavi-shopper-app-full-stack.vercel.app',
-  'http://localhost:3000'
+  'http://localhost:4000'
 ];
 
 app.use(cors({
