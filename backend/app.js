@@ -26,10 +26,7 @@ const uuidv4=v4
 
 
 const corsOptions = {
-  origin: [
-    'https://vyshnavi-shopper-app-full-stack.vercel.app', // your deployed frontend
-    'http://localhost:4000', // optional: for local dev
-  ],
+  origin:'*',
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true,
