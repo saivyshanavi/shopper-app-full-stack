@@ -45,7 +45,7 @@ class LoginForm extends Component {
     this.setState({showApiStatusText:true,
       apiStatusText:"verifying...."
     })
-    const url = 'https://shopper-backend-app.onrender.com/register'
+    const url = 'https://vyshnavi-shopper-app-full-stack.onrender.com/register'
     const options = {
       method: 'POST',
       headers: {
