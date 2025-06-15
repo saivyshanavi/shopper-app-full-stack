@@ -16,17 +16,37 @@ const uuidv4=v4
 
 
 
-const corsOptions = {
+/*const corsOptions = {
   
   origin: 'https://vyshnavi-shopper-app-full-stack.vercel.app', // Temporarily allow all origins for debugging
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true,
-}; 
+}; */ 
+
+
+const allowedOrigins = [
+  'https://vyshnavi-shopper-app-full-stack.vercel.app',
+  'http://localhost:3000'
+];
+
+app.use(cors({
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true)
+    } else {
+      callback(new Error('Not allowed by CORS'))
+    }
+  },
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
+
 
 
 app.use(express.json())
-app.use(cors(corsOptions));
+
 
 
 
