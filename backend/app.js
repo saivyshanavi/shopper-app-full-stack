@@ -18,7 +18,7 @@ const uuidv4=v4
 
 const corsOptions = {
   
-  origin: 'https://shopping-app-lake-ten.vercel.app', // Temporarily allow all origins for debugging
+  origin: 'https://vyshnavi-shopper-app-full-stack.vercel.app', // Temporarily allow all origins for debugging
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true,
