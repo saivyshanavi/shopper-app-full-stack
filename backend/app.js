@@ -16,21 +16,16 @@ const uuidv4=v4
 
 
 
-/*const corsOptions = {
+const corsOptions = {
   
   origin: 'https://vyshnavi-shopper-app-full-stack.vercel.app', // Temporarily allow all origins for debugging
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true,
-}; */ 
+}; 
 
 
-const corsOptions = {
-  origin:'*',
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
-  credentials: true,
-};
+
 
 app.use(cors(corsOptions));
 
