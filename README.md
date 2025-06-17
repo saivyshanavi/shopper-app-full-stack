@@ -26,7 +26,7 @@ Check out the live app here: [Shopper App](https://vyshnavi-shopper-app-full-sta
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/ushasree-mangi/shopper-app.git
+   git clone https://github.com/saivyshanavi/shopper-app-full-stack.git
    ```
 
 2. Navigate to the project directory:
